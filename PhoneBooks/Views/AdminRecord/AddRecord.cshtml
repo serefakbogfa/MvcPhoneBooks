@@ -1,0 +1,36 @@
+﻿@model EntityLayer.Concrete.Records
+
+@{
+    ViewBag.Title = "AddRecord";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>Added Page</h1>
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<br />
+
+<br />
+
+@using (Html.BeginForm("AddRecord", "AdminRecord", FormMethod.Post))
+{
+<div class="form-control-color">
+    @Html.Label("Name")
+    @Html.TextBoxFor(x => x.Name, new { @class = "from-control" })
+    @Html.ValidationMessageFor(x => x.Name, "", new { @class = "text-danger" })
+    <br /><br />
+    @Html.Label("Sur Name")
+    @Html.TextBoxFor(x => x.SurName, new { @class = "from-control" })
+    @Html.ValidationMessageFor(x => x.SurName, "", new { @class = "text-danger" })
+    <br /><br />
+    @Html.Label("Phone NumBer")
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "from-control" })
+    @Html.ValidationMessageFor(x => x.PhoneNumber, "", new { @class = "text-danger" })
+    <br /><br />
+    <button class="btn btn-info">Added</button>
+    <a href="/AdminRecord/Index/" class="btn btn-close">Exit</a>
+
+</div>
+}
+
+
+

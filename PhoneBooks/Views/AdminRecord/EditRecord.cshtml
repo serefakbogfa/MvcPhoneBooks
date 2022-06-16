@@ -1,0 +1,33 @@
+﻿@model EntityLayer.Concrete.Records
+@using DataAccessLayer.Concrete
+
+@{
+    ViewBag.Title = "EditRecord";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>EditRecord</h2>
+@using (Html.BeginForm("EditRecord", "AdminRecord", FormMethod.Post))
+{
+<div class="form-group">
+    @*@Html.Label(" ID")*@
+    @Html.HiddenFor(x => x.Id, new { @class = "form-control" })
+    <br />
+    @Html.Label(" Name")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Name, null, new { @class = "text-danger" })
+    <br />
+    @Html.Label(" Sur Name")
+    @Html.TextBoxFor(x => x.SurName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.SurName)
+    <br />
+    @Html.Label("Phone Number")
+    @Html.TextBoxFor(x => x.PhoneNumber, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.PhoneNumber)
+    <br />
+
+    <button class="btn btn-success">Edit</button>
+    <a href="/AdminRecord/Index/" class="btn btn-close">Exit</a>
+</div>
+}
+

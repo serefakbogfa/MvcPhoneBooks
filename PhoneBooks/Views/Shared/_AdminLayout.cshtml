@@ -1,0 +1,71 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>AdminLTE 3 | Dashboard 3</title>
+
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+
+<body class="hold-transition sidebar-mini">
+    <div class="wrapper">
+
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+
+            <a href="index3.html" class="brand-link">
+
+                <span class="brand-text font-weight-light">PHONE BOOK </span>
+            </a>
+
+            <div class="sidebar">
+
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+
+                    <div class="info">
+                        <a href="#" class="d-block">Şeref Akboğa</a>
+                    </div>
+                </div>
+
+                <nav class="mt-2">
+                   
+                </nav>
+
+            </div>
+
+        </aside>
+
+        <div class="content-wrapper">
+
+            <div class="content">
+                @RenderBody()
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="/plugins/jquery/jquery.min.js"></script>
+
+    <script src="/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script src="/dist/js/adminlte.js"></script>
+
+    <script src="/plugins/chart.js/Chart.min.js"></script>
+    <script src="/dist/js/demo.js"></script>
+    <script src="/dist/js/pages/dashboard3.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@using EntityLayer.Concrete
+@model List<Records>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+<br />
+<table class="table table-bordered">
+    <tr>
+
+        <thstyle="width: 15%; text-align: center>Name</thstyle="width:>
+        <th style="width: 30%; text-align: center">Sur Name</thstyle="width:>
+        <th style="width: 10%; text-align: center">Phone Number</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    <br />
+    @foreach (var item in Model)
+    {
+<tr>
+
+
+    <td>@item.Name</td>
+    <td>@item.SurName</td>
+    <td>@item.PhoneNumber</td>
+    <td><a href="/AdminRecord/DeleteRecord/@item.Id" class="btn btn-danger" >Delete</a></td>
+    <td><a href="/AdminRecord/EditRecord/@item.Id" class="btn btn-success">Edit</a></td>
+
+
+</tr>
+      
+    }
+</table>
+<a href="/AdminRecord/AddRecord" class="btn btn-primary">Create Records</a>
+<br />
+
